@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tools apk</title>
+</head>
+<body>
+
+<!--CSS-->
+<style>
+body {
+  background-color: #111111;
+}
+.text-putih {
+  color: #f2f2f2;
+}
+.text-tengah {
+  text-align: center;
+}
+.btn-keren {
+  background: rgba(120, 120, 120, 0.15); /* abu transparan */
+  color: #ffffff;                       /* teks putih */
+  border: 1.5px solid #444;             /* garis abu gelap */
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* efek hover */
+.btn-keren:hover {
+  background: rgba(160, 160, 160, 0.25);
+  border-color: #888;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* efek klik */
+.btn-keren:active {
+  transform: scale(0.97);
+}
+.button-gray {
+  background-color: #111111; /* hitam */
+  color: #f2f2f2;           /* teks abu terang */
+  border: 1.5px solid #f2f2f2; /* garis abu */
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* efek hover biar hidup */
+button:hover {
+  background-color: #181818;
+}
+
+/* efek klik */
+button:active {
+  transform: scale(0.97);
+}
+.button {
+  padding: 10px 125px;
+}
+.button2 {
+  padding: 10px 111px;
+}
+.efek-button {
+  background-color: #00ff;
+}
+.text-panjang {
+  white-space: nowrap;
+}
+.button-gray2 {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 100px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.button-gray3 {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 103px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.button-gray4 {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 127px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.penyesuaian-background {
+  color: #111111;
+}
+.button-gray5 {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 118px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.button-gray6 {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 98px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.button-gray7 {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 115px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.button-gray8 {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 83px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.dev-button {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 91px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.dev-button2 {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 130px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.dev-button3 {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 109px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.dev-button4 {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 90px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.gray-color-dark {
+  color: #808080;
+}
+.down-button {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 91px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.down-button2 {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 91px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.red-color {
+  color: #ff0000;
+}
+.lap-btn {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  padding: 10px 86px; /* ⬅️ lebih lebar ke samping */
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.text-emas {
+  color: #ffd700;
+}
+</style>
+
+<!--HTML-->
+<h1 class="text-tengah text-putih">TOOLS  BY  NAZZ</h1>
+<p class="text-tengah text-putih">⚠︎ dev : NazNotDev ⚠︎</p><br>
+
+<p class="text-tengah text-putih">📡 berikut tools :</p>
+
+<a href="https://www.xnxx.com"><button class="button-gray4">PORNO</button></a>
+
+<p class="penyesuaian-background"></p>
+
+<a href="https://ssstik.io"><button class="button-gray3 text-panjang">Downloader tt.</button></a>
+
+<p class="penyesuaian-background"></p>
+
+<a href="https://bugwhatsapp.vercel.app"><button class="button-gray2 text-panjang">whatsapp bug's</button></a>
+
+<p></p>
+
+<a href="https://calcuped.com/basic-calculator/"><button class="button-gray5">Kalkulator</button></a>
+
+<p></p>
+
+<a href="https://genieqrcode.com/"><button class="button-gray6 text-panjang">QR GENERATOR</button></a>
+
+<p></p>
+
+<a href="https://www.virustotal.com/"><button class="button-gray7 text-panjang">CEK VIRUS</button></a>
+
+<p></p>
+
+<a href="https://www.google.com/android/find"><button class="text-panjang button-gray8">LACAK PERANGKAT</button></a><br>
+
+<!--DOWNLOADDER-->
+
+<h1 class="text-tengah text-putih">Download apk</h1>
+
+<p class="text-putih text-tengah">TERMUX !</p>
+
+<p class="text-putih">Langkah 1 </p>
+
+<p class="text-putih">download f-Droid :</p>
+
+<a href="https://f-droid.org/en/packages/org.fdroid.fdroid/"><button class="down-button text-panjang">Download f-Droid.</button></a>
+
+<p class="text-putih">Langkah 2</p>
+<p class="text-putih">download termux :</p>
+
+<a href="https://f-droid.org/repo/com.termux_1022.apk"><button class="text-panjang down-button2">Download Termux</button></a>
+
+
+
+<!--DEVELOPER-->
+<h1 class="text-tengah text-putih">Follow us</h1>
+
+<p class="text-tengah text-putih">Follow untuk mendapatkan info  terbaru ッ</p><br>
+
+<p class="text-tengah text-putih">🌐 Sosmed developer :</p>
+
+<a href="https://whatsapp.com/channel/0029VbBoRIVAe5Vw5IBAs00q"><button class="dev-button text-panjang">saluran whatsapp</button></a>
+
+<p></p>
+
+<a href="https://www.tiktok.com/@akun.gj579?_r=1&_t=ZS-93XsgxJaf5A"><button class="dev-button2">Tiktok</button></a>
+
+<p></p>
+
+<a href="https://t.me/+z05-vRRVAIAzMTZl"><button class="dev-button3 text-panjang"> GB telegram</button></a>
+
+<p></p>
+
+<a href="https://t.me/+VG2P2wGghUlkM2Jl"><button class="dev-button4 text-panjang">channel telegram.</button></a>
+<p class="text-tengah gray-color-dark">#project_2026</p><br>
+
+
+<h1 class="text-tengah red-color">⚠︎ WARNING ⚠︎</h1>
+    <p class="text-putih text-tengah">sebelum menggunakan tools yang tersedia, pastikan umur anda di atas 18 tahun. (+18)</p>
+
+    <p class="text-tengah text-putih">gunakan tools dengan bijak</p><br>
+    <p class="red-color text-tengah">TANGGUNG JAWAB !</p>
+    <p class="text-putih text-tengah">Developer tidak akan bertanggung jawab atas segalah hal buruk yang terjadi, jika anda mendapatkan masalah, kami  tidak akan bertanggung jawab !!</p>
+    <p class="text-tengah text-putih">⚠️ Resiko ditanggung pengguna ! ⚠️</p><br>
+    
+    <!--LAPORAN-->
+    <h1 class="red-color text-tengah">⚠︎ LAPORAN ⚠︎</h1>
+    <p class="text-tengah text-putih">Jika anda mengalami masalah / bug dalam apk ini, kami mohon maaf.</p>
+    <p class="text-tengah text-putih">Harap lapor jika ada, kami akan memperbaikinya....</p><br>
+    <p class="text-putih text-tengah">klik untuk melapor...</p>
+    <a href="https://t.me/+z05-vRRVAIAzMTZl"><button class="lap-btn text-panjang">LAPOR MASALAH !</button></a>
+    <p class="text-tengah text-emas">★★★★★</p>
+    <p class="text-tengah gray-color-dark">@NazNotDev 2026 project</p>
+</body>
+</html>
